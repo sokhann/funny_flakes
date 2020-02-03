@@ -1,0 +1,33 @@
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.logo
+    width: 130px
+
+.navigation
+    text-transform: uppercase
+    &__list
+        display: flex
+    &__item
+        &:not(:last-child) 
+            margin-right: $gutter*1.5
+        a
+            color: $primary-color
+            position: relative
+            &:hover
+                &:after
+                    display: block
+                    content: ''
+                    position: absolute
+                    bottom: -8px
+                    width: 100%
+                    height: 2px
+                    background-color: $primary-color
+
+.order
+    &__btn
+        width: 35px
+        padding: 0
+        margin: 0

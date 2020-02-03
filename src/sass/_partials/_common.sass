@@ -1,0 +1,148 @@
+.section
+    min-height: 100vh
+    .container 
+        padding-top: $gutter*2
+        padding-bottom: $gutter*2
+    h2
+        font-size: 2rem
+        text-transform: uppercase
+        margin-bottom: $gutter/2
+    h5
+        font-size: 1rem
+        text-transform: uppercase
+    &.section_flex
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    &.promo
+        background-color: $accent-color
+        position: relative
+    &.menu
+        background-color: $bg-color
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffd2ca' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='10' cy='10' r='10'/%3E%3Ccircle /%3E%3C/g%3E%3C/svg%3E")
+    &.combo
+        background-color: $secondary-color
+    &.about
+        background-color: $accent-color
+
+.promo
+    .container 
+        padding-top: $gutter/2
+    &__title
+        text-align: center
+        margin: $gutter*4 0
+        h1
+            font-size: 4rem
+            font-family: $medium-font
+        h3
+            font-size: 4rem
+            font-family: $accent-font
+    &__image
+        position: absolute
+        left: 0
+        bottom: -200px
+        width: 100%
+        margin: auto
+        div
+            max-width: 400px
+            margin: auto
+
+.menu
+    .container 
+        padding-top: $gutter*8
+    .card
+        background-color: $bg-color
+        max-width: 800px
+        margin: 0 auto
+    .menu__title
+        background-color: $accent-color
+        padding: $gutter/2
+        margin: $gutter 0
+        font-size: 1.3rem
+        text-transform: uppercase
+        letter-spacing: 2px
+
+.product
+    label
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+    .product__name
+        flex-basis: 100%
+    .product__price
+        flex-shrink: 0
+        margin-right: $gutter/2
+
+.additional
+    border-top: 2px solid $primary-color 
+    border-bottom: 2px solid $primary-color
+    padding: $gutter 0
+    margin: $gutter 0
+    &__list
+        text-align: left
+        max-width: 300px
+        margin: auto
+
+
+.combo
+    text-align: center
+    .flex-container
+        margin-top: $gutter
+    .card
+        background-color: $light-color
+        display: flex
+        flex-direction: column
+        &:not(:last-child) 
+            margin-right: $gutter
+            
+        h5
+            margin-bottom: $gutter/2
+        p
+            text-transform: uppercase
+        button
+            margin-top: auto
+
+.about
+    .flex-container
+        flex-wrap: wrap
+        width: 100%
+        height: 100%
+        min-height: inherit
+    .col
+        flex-basis: 50%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &:nth-child(1)
+            background-image: url(../img/cereal-3.jpg)
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: 50% 50%
+        &:nth-child(4)
+            background-image: url(../img/cereal-2.jpg)
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: 50% 50%
+        &:nth-child(2)
+            align-items: flex-start
+        &:nth-child(3)
+            align-items: flex-end
+        &>div
+            width: 100%
+            padding: $gutter*1.5
+        h2
+            margin-bottom: $gutter
+        p
+            margin-bottom: $gutter
+    &__text
+        max-width: $container-width/2
+    &__item 
+        display: flex
+        align-items: flex-start
+    &__img
+        flex-shrink: 0
+        margin-top: $gutter/5
+        margin-right: $gutter/2
+        width: 40px

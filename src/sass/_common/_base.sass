@@ -1,0 +1,92 @@
+* 
+    box-sizing: border-box
+
+html
+    min-height: 100%
+
+html, body
+    font-size: 16px
+    width: 100%
+    line-height: 1.6
+    font-family: $regular-font, sans-serif
+    overflow-x: hidden
+    color: $primary-color
+
+body
+    position: relative
+    height: 100%
+    background-color: $bg-color
+
+.wrapper
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+    min-height: 100vh
+
+.container
+    width: 100%
+    height: 100%
+    max-width: $container-width
+    margin: 0 auto
+    padding: $gutter
+
+main
+    flex: 1
+
+footer
+    flex: 0
+
+h1,h2,h3,h4,h5,h6 
+    font-family: $bold-font
+    font-weight: normal
+    margin: 0
+
+h6
+    font-size: 1rem
+
+p
+    margin-top: 0
+    margin-bottom: $gutter/4 
+    font-family: $regular-font
+
+strong
+    font-family: $medium-font
+a 
+    text-decoration: none
+    &:hover
+        text-decoration: none
+
+img
+    display: block
+    width: 100%
+    height: 100%
+
+input, textarea
+    padding: 0.5rem
+    border-radius: 4px
+    border: 1px solid $primary-color
+    resize: vertical
+    max-height: 32px
+
+ul
+    padding: 0
+    margin: 0
+    li
+        list-style-type: none
+
+button
+    border: none
+    background-color: transparent
+
+button, a
+    transition: all linear 0.5s
+
+
+.flex-container
+    display: flex
+    justify-content: space-between
+
+.col
+    flex-basis: 45%
+    text-align: left
