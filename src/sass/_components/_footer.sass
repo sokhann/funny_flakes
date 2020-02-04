@@ -1,3 +1,38 @@
 .copyrite
     background-color: $secondary-color
     text-align: center
+
+.footer
+    h4
+        text-transform: uppercase
+        font-family: $medium-font
+        margin-bottom: $gutter/2
+    .flex-container
+        flex-wrap: wrap
+    .col
+        max-width: 225px
+        margin-bottom: $gutter/2
+        &.col_lg 
+            max-width: unset
+    &__img
+        width: 150px
+
+.subscribe
+    display: flex
+    align-items: center
+    padding: $gutter/2 0
+    input
+        max-height: 60px
+        flex-basis: 100%
+    .btn
+        flex-shrink: 0
+        margin-left: $gutter
+
+.socials
+    display: flex
+    a
+        display: block
+        width: 30px
+        cursor: pointer
+        &:first-child
+            margin-right: $gutter
