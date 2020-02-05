@@ -7,13 +7,49 @@
         text-transform: uppercase
         font-family: $medium-font
         margin-bottom: $gutter/2
-    .flex-container
-        flex-wrap: wrap
-    .col
-        max-width: 225px
-        margin-bottom: $gutter/2
-        &.col_lg 
-            max-width: unset
+    &>.container
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        grid-gap: $gutter
+        .col
+            &:nth-child(1)
+                grid-column: 1 / 4
+            &:nth-child(2)
+                grid-column: 4 / 7
+            &:nth-child(3)
+                grid-column: 7 / 10
+            &:nth-child(4)
+                grid-column: 10 / 13
+            &:nth-child(5)
+                grid-column: 1 / 4
+            &:nth-child(6)
+                grid-column: 4 / 10
+            &:nth-child(7)
+                grid-column: 10 / 13
+            @include md
+                &:nth-child(1)
+                    grid-column: 1 / 7
+                &:nth-child(2)
+                    grid-column: 7 / 13
+                &:nth-child(3)
+                    grid-column: 1 / 7
+                &:nth-child(4)
+                    grid-column: 7 / 13
+                &:nth-child(5)
+                    display: none
+                &:nth-child(6)
+                    grid-column: 1 / 13
+                &:nth-child(7)
+                    grid-column: 1 / 13
+            @include sm
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7)
+                    grid-column: 1 / 13
     &__img
         width: 150px
 
@@ -26,7 +62,9 @@
         flex-basis: 100%
     .btn
         flex-shrink: 0
-        margin-left: $gutter
+        padding-left: $gutter/2
+        padding-right: $gutter/2
+        margin-left: $gutter/2
 
 .socials
     display: flex

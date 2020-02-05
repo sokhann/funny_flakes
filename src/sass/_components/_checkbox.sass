@@ -1,0 +1,71 @@
+.checkbox
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    cursor: pointer
+    margin-bottom: $gutter/6
+
+.checkbox__name
+    flex-basis: 100%
+
+.checkbox__value
+    flex-shrink: 0
+    margin-right: 38px
+
+input[type="checkbox"]
+    position: absolute
+    opacity: 0
+    height: 0
+    width: 0
+
+/* Create a custom checkbox */
+.checkbox__mark 
+  position: absolute
+  top: 0
+  right: 0
+  height: 25px
+  width: 25px
+  background-color: #ffffff
+  border: 1px solid #ccc
+  transition: all linear 0.3s
+  border-radius: 3px
+
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input[type="checkbox"] ~ .checkbox__mark 
+  background-color: #f0efef
+
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input[type="checkbox"]:checked ~ .checkbox__mark 
+  background-color: $primary-color
+
+
+/* Create the checkbox__mark/indicator (hidden when not checked) */
+.checkbox__mark:after 
+  content: ""
+  position: absolute
+  display: none
+
+
+/* Show the checkbox__mark when checked */
+.checkbox input[type="checkbox"]:checked ~ .checkbox__mark:after 
+  display: block
+
+
+/* Style the checkbox__mark/indicator */
+.checkbox .checkbox__mark:after 
+  left: 8px
+  top: 5px
+  width: 4px
+  height: 8px
+  border: solid white
+  border-width: 0 3px 3px 0
+  transform: rotate(45deg)
+
+
+@include md
+  .checkbox__mark 
+    height: 16px
+    width: 16px

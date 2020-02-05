@@ -29,9 +29,17 @@
 .promo
     .container 
         padding-top: $gutter/2
+        min-height: inherit
+        display: flex
+        flex-direction: column
     &__title
         text-align: center
         margin: $gutter*4 0
+        flex: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
         h1
             font-size: 5rem
             font-family: $medium-font
@@ -62,18 +70,6 @@
         font-size: 1.3rem
         text-transform: uppercase
         letter-spacing: 2px
-
-.product
-    label
-        display: flex
-        align-items: center
-        justify-content: space-between
-        cursor: pointer
-    .product__name
-        flex-basis: 100%
-    .product__price
-        flex-shrink: 0
-        margin-right: $gutter/2
 
 .additional
     border-top: 2px solid $primary-color 
